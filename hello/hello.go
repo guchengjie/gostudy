@@ -13,11 +13,14 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
-	message, error := greetings.Hello("fsdgsfd")
+	// 声明一个names的数组
+	names := []string{"zhangsan", "lishi"}
+
+	messages, error := greetings.Hellos(names)
 
 	if error != nil {
 		log.Fatal(error)
 	}
 
-	fmt.Println(message)
+	fmt.Println(messages)
 }
